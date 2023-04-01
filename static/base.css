@@ -28,3 +28,20 @@
         font-size: 12px;
     }
 }
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.goorm_header_nav {
+    margin: 0 1rem;
+}
+
+.goorm_header_navbar {
+    margin: 1rem 0;
+}

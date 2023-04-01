@@ -1,28 +1,31 @@
     <div class="goorm_header">
+
         <div>
             <h1 class="goorm_logo">Goorm</h1>
         </div>
-        <div>
-            <a href="{% url 'articleapp:list' %}">
-                <span>Articles</span>
+
+        <div style="goorm_header_navbar">
+            <a href="{% url 'articleapp:list' %}" style="goorm_header_nav">
+                <span>Articles</span> |
             </a>
-            <span>nav1</span>
-            <span>nav2</span>
-            <span>nav3</span>
+            <a href="{% url 'projectapp:list' %}" style="goorm_header_nav">
+                <span>Projects</span> |
+            </a>
             {% if not user.is_authenticated %}
-            <a href="{% url 'accountapp:login' %}?next={{ request.path }}">
-                <span>Login</span>
+            <a href="{% url 'accountapp:login' %}?next={{ request.path }}" style="goorm_header_nav">
+                <span>Login</span> |
             </a>
-            <a href="{% url 'accountapp:create' %}">
+            <a href="{% url 'accountapp:create' %}" style="goorm_header_nav">
                 <span>SignUp</span>
             </a>
             {% else %}
-            <a href="{% url 'accountapp:detail' pk=user.pk %}">
-                <span>MyPage</span>
+            <a href="{% url 'accountapp:detail' pk=user.pk %}" style="goorm_header_nav">
+                <span>MyPage</span> |
             </a>
-            <a href="{% url 'accountapp:logout' %}?next={{ request.path }}">
+            <a href="{% url 'accountapp:logout' %}?next={{ request.path }}" style="goorm_header_nav">
                 <span>Logout</span>
             </a>
             {% endif %}
         </div>
+
     </div>
