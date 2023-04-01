@@ -5,18 +5,24 @@
 
 <style>
 
-    .container div {
-      width: 250px;
+    .container {
+        padding: 0;
+        margin: 0, auto;
+    }
 
-      background-color: antiquewhite;
+    .container a {
+      width: 40%;
+      max-width: 250px;
+    }
+
+    .container div {
       display: flex;
       justify-content: center;
       align-items: center;
-
       border-radius: 1rem;
     }
 
-    .container img{
+    .container img {
       width: 100%;
       border-radius: 1rem;
     }
@@ -40,7 +46,7 @@
     {% include 'snippets/pagination.html' with page_obj=page_obj %}
 
     <div style="text-align: center;">
-        <a href="{% url 'articleapp:create' %}" class="btn btn-dark rounded-pill col-3 mt-3 mb-3">
+        <a href="{% url 'articleapp:create' %}" class="btn btn-dark rounded-pill mt-3 mb-3 px-3">
             Create Article
         </a>
     </div>
