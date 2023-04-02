@@ -20,11 +20,13 @@
           {% if user.is_authenticated %}
             {% if not subscription %}
             <a href="{% url 'subscriptionapp:subscribe' %}?project_pk={{ target_project.pk }}"
+               style="color: white"
                class="btn btn-primary rounded-pill px-3">
                 Subscribe
             </a>
             {% else %}
             <a href="{% url 'subscriptionapp:subscribe' %}?project_pk={{ target_project.pk }}"
+               style="color: white"
                class="btn btn-warning rounded-pill px-3">
                 Unsubscribe
             </a>

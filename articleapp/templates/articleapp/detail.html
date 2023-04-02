@@ -22,10 +22,12 @@
 
         {% if target_article.writer == user %}
         <a href="{% url 'articleapp:update' pk=target_article.pk %}"
+        style="color: white"
         class="btn btn-primary rounded-pill col-3">
           Update
         </a>
         <a href="{% url 'articleapp:delete' pk=target_article.pk %}"
+        style="color: white"
         class="btn btn-danger rounded-pill col-3">
           Delete
         </a>
